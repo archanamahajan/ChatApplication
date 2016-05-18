@@ -4,11 +4,14 @@ Author: Archana Mahajan
 
 This is a basic chat application using technologies such as AngularJS, NodeJS, Express and Socket.io.
 
-Following are the things needed to run the application Node, npm, bower.
+Following are the tools, needed to install the application dependencies:
+1) Node (Download and install from nodejs site)
+2) npm (It will get install automatically along with Node)
+3) bower (npm install bower)
 
 Pull this project to see the changes.
 
-se below command to install node dependencies
+Use below command to install node dependencies
 
 npm install
 
