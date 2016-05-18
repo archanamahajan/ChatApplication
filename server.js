@@ -5,8 +5,7 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var messageArray = [];
 var userArray = [];
-var BASEURL = '10.55.24.188';
-//server.listen(3000, 'localhost');
+var BASEURL = 'localhost';
 
 var s = server.listen(3000, BASEURL, function () {
     var host = s.address().address;
@@ -17,16 +16,14 @@ var s = server.listen(3000, BASEURL, function () {
 app.use(express.static(__dirname + '/ng'));essageArray = [];
 io.on('connection', function (socket) {
     socket.on('chat message', function(msg){
-        console.log('msg : ', msg);
         messageArray.push(msg);
         console.log('message: ' + messageArray);
-        socket.broadcast.emit('message received', messageArray);
     });
     
     socket.emit('userConnected');
     
     socket.on('show status', function(uname) {
-        console.log('uanem on user status : ', uname);
+        console.log('username on user status : ', uname);
         userArray.push(uname);
         socket.broadcast.emit('connected users list', userArray);
     });
