@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css"></link>
+        <script src="bower_components/socket.io-client/socket.io.js"></script>
+        <!--<script src="bower_components/socket.io/socket.io.js"></script>-->
+        <!--<script>
+            //var socket = io('http://localhost');
+            var socket = io.connect('http://localhost:3000');
+            socket.on('news', function (data) {
+                console.log('in index.html on : ',data);
+                socket.emit('my other event', { my: 'data' });
+            });
+        </script>-->
+        
+            
+    </head>
+    <body ng-app="chatapp" align="center">
+        <header class="headerCls"><b> DMITRI Chat App </b></header>
+        <div class="container-fluid body-content">
+            <section id="mainContainer" ui-view></section>
+        </div>
+        
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        
+        <script src="app.js"></script>
+        
+        <script src="controller/login.js"></script>
+        <script src="controller/chat.js"></script>
+        
+        
+        <script>
+            var winHeight = $( window ).height();
+            $('#mainContainer').height(winHeight - 160);
+        </script>
+    </body>
+</html>

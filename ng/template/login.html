@@ -1,0 +1,26 @@
+<div class="col-sm-12 col-md-12 col-lg-12 loginHeaderColor">
+    <b><h3>Sign In to chat with the Customer Care</h3></b>
+</div>
+<form name="loginPage" novalidate class="col-sm-12 col-md-12 col-lg-12">
+    <div class="col-sm-12 col-md-12 col-lg-12 marginTop10PX">
+        <label class="col-sm-6 col-md-6 col-lg-6">Username: </label> 
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <input class="form-control col-sm-12 col-md-12 col-lg-12" name="username" type="text" ng-model="username" required/>
+        </div>
+        <span class="errorCls" ng-if="submitted && loginPage.username.$error.required">
+            Please enter username
+        </span>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 marginTop10PX">
+        <label class="col-sm-6 col-md-6 col-lg-6">Password: </label>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <input class="form-control col-sm-12 col-md-12 col-lg-12" name="password" type="password" ng-model="password" required/>
+        </div>
+        <span class="errorCls" ng-if="submitted && loginPage.password.$error.required">
+            Please enter password
+        </span>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 marginTop10PX">
+        <button type="button" class="btn btn-success" ng-click="doLogin()">Login</button>
+    </div>
+</form>

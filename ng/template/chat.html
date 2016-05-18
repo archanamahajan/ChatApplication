@@ -1,0 +1,25 @@
+<div id="chatWindow" class="container">
+    <div class="col-sm-12 col-md-12 col-lg-12 marginTop5PX">
+      <label ng-bind="statusMsg"></label>
+      <div ng-repeat = "user in connectedUsers track by $index">{{user}} connected</div>
+      <button type="button" class="btn btn-success" ng-click="doEndChat()">End Chat</button>
+    </div>
+    <ul class="col-sm-12 col-md-12 col-lg-12" id="messages">
+      <li class="col-sm-12 col-md-12 col-lg-12" ng-repeat="message in msgArray track by $index">
+        <label class="col-sm-12 col-md-12 col-lg-12 messageText" 
+            ng-class="{'pinkMsgTextColor' : message.username == uname, 'blueMsgTextColor' : message.username != uname}">
+            <div align="left" class="col-sm-12 col-md-12 col-lg-12" ng-bind="message.username"></div>
+            <div align="left" class="col-sm-12 col-md-12 col-lg-12 msg" ng-bind="message.msg"></div>
+            <div align="right" class="col-sm-12 col-md-12 col-lg-12" ng-bind="message.time"></div>
+          </label>
+      </li>
+    </ul>
+    <form class="col-md-12 col-sm-12 col-lg-12 chatFooter" ng-submit="sendMessage()">
+        <div class="col-md-10 col-sm-10 col-lg-10 textDiv">
+            <input class="form-control col-sm-12 col-md-12 col-lg-12" name="message" id="m" autocomplete="off" ng-model="message" autofocus/>
+        </div>
+        <div class="col-md-2 col-sm-2 col-lg-2 sendBtnDiv">
+            <button type="button" class="btn btn-success" ng-click="sendMessage()">Send</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+{
+  "name": "ng",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Archana Mahajan"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "socket.io": "^1.4.6",
+    "socket.io-client": "^1.4.6",
+    "bootstrap": "^3.3.6"
+  }
+}
