@@ -1,4 +1,4 @@
-# ChatApplication1
+# ChatApplication
 
 Author: Archana Mahajan
 
